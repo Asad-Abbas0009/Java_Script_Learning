@@ -72,35 +72,35 @@
     // getter -> access properties
     // setter -> change or update or mutate properties
 
-let person = {
-    fName :'Asad',
-    lName : 'Abbas',
-    get fullName() {
-        return `${person.fName} ${person.lName}`;
-    },
-    set fullName(value) {
-        if(typeof value !== String){
-            throw new Error("you have not send a string");
-        }
-        let parts = value.split(' ');
-        this.fName = parts[0];
-        this.lName = parts[1];
-    }
-};
+// let person = {
+//     fName :'Asad',
+//     lName : 'Abbas',
+//     get fullName() {
+//         return `${person.fName} ${person.lName}`;
+//     },
+//     set fullName(value) {
+//         if(typeof value !== String){
+//             throw new Error("you have not send a string");
+//         }
+//         let parts = value.split(' ');
+//         this.fName = parts[0];
+//         this.lName = parts[1];
+//     }
+// };
 
-// person.fullName = 'Love babber';
-// console.log(person.fullName);
+// // person.fullName = 'Love babber';
+// // console.log(person.fullName);
 
-//Error Handing
-    //try & catch method
+// //Error Handing
+//     //try & catch method
 
-    try {
-        person.fullName = true;
-    }
-    catch(e){
-        alert(e);
-    }
-    console.log(person.fullName);
+//     try {
+//         person.fullName = true;
+//     }
+//     catch(e){
+//         alert(e);
+//     }
+//     console.log(person.fullName);
 
 //Scope -> 
 
@@ -110,8 +110,14 @@ let person = {
 //Reducing an array
 
 let arr = [1,2,3,4,5];
-let total = 0;
+// let total = 0;
 
-for(let value of arr)
-    total = total + value;
-console.log(total);
+// for(let value of arr)
+//     total = total + value;
+// console.log(total);
+
+//Reduce Method
+
+let totalSum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(totalSum);
